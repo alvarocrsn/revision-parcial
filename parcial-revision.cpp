@@ -1,5 +1,5 @@
-/// 30 años biciestos: 2000 -> 2004 2008 2012 ... 2120
-/// año / 4 no por 100 a menos que sea divisible por 400
+/// 30 aÃ±os biciestos: 2000 -> 2004 2008 2012 ... 2120
+/// aÃ±o / 4 no por 100 a menos que sea divisible por 400
 
 /*
 #include <iostream>
@@ -13,7 +13,7 @@ int main(){
     cin >> anio;
 
     /// hay que repetir 30 veces algo
-    /// sumarle 1 al año solo si es biciesto, para esto en vez de i++ es  -> anio++
+    /// sumarle 1 al aÃ±o solo si es biciesto, para esto en vez de i++ es  -> anio++
 
     for(int i = 0; i <30; anio++){
             if(anio % 4 == 0 && anio % 100 !=0 || (anio % 400 ==0)){
@@ -34,7 +34,7 @@ using namespace std;
 
 int main() {
     int anio;
-    cout << "Ingrese un año: ";
+    cout << "Ingrese un aÃ±o: ";
     cin >> anio;
 
     // Repetir 30 veces
@@ -42,12 +42,12 @@ int main() {
         if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
             cout << anio << endl;
         }
-        anio++; // Incrementar el año
+        anio++; // Incrementar el aÃ±o
     }
 
     return 0;
 }
-*/
+
 
 #include<iostream>
 #include<string>
@@ -84,6 +84,54 @@ int main(){
     int contador = iterador(longitud, cadena);
 
     cout << contador << endl;
+
+    return 0;
+}
+*/
+
+#include <iostream>
+#include <ctype.h>
+
+using namespace std;
+
+int main(){
+
+    char cadena[] = "Abuelitooo";
+
+    int contarA = 0;
+    int contarE = 0;
+    int contarI = 0;
+    int contarO = 0;
+    int contarU = 0;
+
+    for(int i = 0; cadena[i]!= NULL; i++){
+
+        char minuscula = tolower(cadena[i]);
+
+        switch (minuscula){
+            case 'a':
+            contarA++;
+            break;
+
+            case 'e':
+            contarE++;
+            break;
+
+            case 'i':
+            contarI++;
+            break;
+
+            case 'o':
+            contarO++;
+            break;
+
+            case 'u':
+            contarU++;
+            break;
+
+        }
+
+    }
 
     return 0;
 }
